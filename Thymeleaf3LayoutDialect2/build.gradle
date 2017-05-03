@@ -1,17 +1,7 @@
 apply plugin: 'java'
-apply plugin: "org.akhikhl.gretty"
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 sourceCompatibility = '1.8'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-buildscript {
-    repositories {
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies {
-        classpath "org.akhikhl.gretty:gretty:1.2.4"
-    }
-}
 // NetBeans will automatically add "run" and "debug" tasks relying on the
 // "mainClass" property. You may however define the property prior executing
 // tasks by passing a "-PmainClass=<QUALIFIED_CLASS_NAME>" argument.
